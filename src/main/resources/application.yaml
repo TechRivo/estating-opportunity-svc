@@ -4,3 +4,8 @@ spring:
     password: ${AMQP_PASSWORD}
     host: ${AMQP_HOST}
     virtual-host: ${AMQP_VIRTUAL_HOST}
+estating:
+  api:
+    url: ${ESTATING_API_URL}
+    username: ${ESTATING_API_USERNAME}
+    password: ${ESTATING_API_PASSWORD}
