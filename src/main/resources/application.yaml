@@ -6,6 +6,6 @@ spring:
     virtual-host: ${AMQP_VIRTUAL_HOST}
 estating:
   api:
-    url: ${ESTATING_API_URL}
+    url: ${ESTATING_API_URL:https://api-test.estating.com}
     username: ${ESTATING_API_USERNAME}
     password: ${ESTATING_API_PASSWORD}
