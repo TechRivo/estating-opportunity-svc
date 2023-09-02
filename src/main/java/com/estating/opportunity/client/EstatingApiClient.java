@@ -1,8 +1,10 @@
 package com.estating.opportunity.client;
 
-import com.estating.opportunity.dto.PropertyTeaserDTO;
+import com.estating.opportunity.domain.PropertyTeaser;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -12,6 +14,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public interface EstatingApiClient {
 
     @RequestMapping(method = GET, value = "/propertyTeaser")
-    List<PropertyTeaserDTO> getPropertyTeasers();
+    List<PropertyTeaser> getPropertyTeasers(@RequestParam String internalName);
 
+    @RequestMapping(method = GET, value = "/propertyTeaser/{teaserId}")
+    PropertyTeaser getById(@PathVariable String teaserId);
 }
